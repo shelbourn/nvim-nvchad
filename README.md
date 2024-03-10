@@ -1,2 +1,2 @@
-# starter
-Starter config for NvChad
+# Nvim Config VCS
+Forked from NvChad starter repo
