@@ -11,15 +11,14 @@ local capabilities = configs.capabilities
 
 local lspconfig = require("lspconfig")
 local servers = {
+  --TO-DO: setup LSPs for rust, prettier, php-cs-fixer, stylua
 	"clangd",
 	"cssls",
 	"html",
-	"lua-language-server",
-	"php-cs-fixer",
-	"python-lsp-server",
-	"rust-analyzer",
-	"stylua",
-	"typescript-language-server",
+	"lua_ls",
+  "phpactor",
+	"pylsp",
+	"tsserver",
 }
 
 for _, lsp in ipairs(servers) do
