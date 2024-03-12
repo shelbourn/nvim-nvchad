@@ -18,6 +18,7 @@ local servers = {
 	"lua_ls",
   "phpactor",
 	"pylsp",
+  "rust_analyzer",
 	"tsserver",
 }
 
