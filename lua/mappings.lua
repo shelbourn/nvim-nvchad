@@ -11,3 +11,5 @@ map("n", "<leader>fm", function()
 end, { desc = "File Format with conform" })
 
 map("i", "jk", "<ESC>", { desc = "Escape insert mode" })
+
+map("n", "<leader>fF", "<cmd>Telescope grep_string<cr>", { desc = "grep_string: search term under cursor" })
