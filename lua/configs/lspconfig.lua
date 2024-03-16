@@ -1,8 +1,8 @@
---[[
+------
 --LSP config
 --extends the NvChad defaults with custom LSP configs
 --add new servers to the `local servers` var
---]]
+------
 local configs = require("nvchad.configs.lspconfig")
 
 local on_attach = configs.on_attach
@@ -11,14 +11,15 @@ local capabilities = configs.capabilities
 
 local lspconfig = require("lspconfig")
 local servers = {
-  --TO-DO: setup LSPs for rust, prettier, php-cs-fixer, stylua
+	--TO-DO: setup LSPs for rust, prettier, php-cs-fixer, stylua
 	"clangd",
 	"cssls",
+	"eslint",
 	"html",
 	"lua_ls",
-  "phpactor",
+	"phpactor",
 	"pylsp",
-  "rust_analyzer",
+	"rust_analyzer",
 	"tsserver",
 }
 

@@ -33,6 +33,7 @@ return {
 			ensure_installed = {
 				"clangd",
 				"css-lsp",
+                "eslint-lsp",
 				"html-lsp",
 				"lua-language-server",
 				"php-cs-fixer",
