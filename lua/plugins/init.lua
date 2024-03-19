@@ -36,7 +36,7 @@ return {
                 "eslint-lsp",
 				"html-lsp",
 				"lua-language-server",
-				"php-cs-fixer",
+				"phpactor",
 				"prettier",
 				"prettierd",
 				"python-lsp-server",

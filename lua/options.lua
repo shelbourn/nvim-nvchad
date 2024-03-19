@@ -1,6 +1,7 @@
 require "nvchad.options"
 
 local opt = vim.opt
+local api = vim.api
 
 --tab stops
 opt.shiftwidth = 4
