@@ -49,6 +49,15 @@ return {
     },
   },
 
+  -- lsp_lines.nvim: virtual text for diagnostics instead of real text
+  {
+    "https://git.sr.ht/~whynothugo/lsp_lines.nvim",
+    lazy = false,
+    config = function()
+      require("lsp_lines").setup()
+    end,
+  },
+
   ------
   --syntax highlighting
   ------

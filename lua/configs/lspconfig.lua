@@ -16,7 +16,6 @@ local servers = {
   "cssls",
   "eslint",
   "html",
-  "lua_ls",
   "phpactor",
   "pylsp",
   "rust_analyzer",
