@@ -24,3 +24,6 @@ o.cursorlineopt = "both"
 vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(vim.lsp.diagnostic.on_publish_diagnostics, {
   virtual_text = false,
 })
+
+--disabling swap files because they suck and are annoying
+opt.swapfile = false

@@ -26,5 +26,6 @@
   "plenary.nvim": { "branch": "master", "commit": "f7adfc4b3f4f91aab6caebf42b3682945fbc35be" },
   "telescope.nvim": { "branch": "master", "commit": "f06eeb79e14d5c95745558927c5b1f341c0a3a28" },
   "ui": { "branch": "v2.5", "commit": "9a98ddbed8db34b6a47e6806ac0a68803d693eaf" },
+  "vim-php-cs-fixer": { "branch": "master", "commit": "d6dec5d058a1509e5a15c796016adfa39df34646" },
   "which-key.nvim": { "branch": "main", "commit": "4433e5ec9a507e5097571ed55c02ea9658fb268a" }
 }
