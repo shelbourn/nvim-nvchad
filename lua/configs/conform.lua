@@ -1,13 +1,15 @@
 local options = {
   formatters_by_ft = {
-    css = {{ "prettierd", "prettier" }},
-    html = {{ "prettierd", "prettier" }},
-    javascript = {{ "prettierd", "prettier" }},
-    javascriptreact = {{ "prettierd", "prettier" }},
-    json = {{ "prettierd", "prettier" }},
+    css = { { "prettierd", "prettier" } },
+    html = { { "prettierd", "prettier" } },
+    javascript = { { "prettierd", "prettier" } },
+    javascriptreact = { { "prettierd", "prettier" } },
+    json = { { "prettierd", "prettier" } },
     lua = { "stylua" },
-    typescript = {{ "prettierd", "prettier" }},
-    typescriptreact = {{"prettierd", "prettier"}}
+    -- get this formatter working, it needs a config and I'm not sure how to do it
+    -- php = { "php-cs-fixer" },
+    typescript = { { "prettierd", "prettier" } },
+    typescriptreact = { { "prettierd", "prettier" } },
   },
 
   -- format_on_save = {
