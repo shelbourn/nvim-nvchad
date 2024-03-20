@@ -1,6 +1,7 @@
 return {
 	{
 		"stevearc/conform.nvim",
+    -- event = 'BufWritePre', -- uncomment for format on save
 		config = function()
 			require("configs.conform")
 		end,
@@ -33,7 +34,7 @@ return {
 			ensure_installed = {
 				"clangd",
 				"css-lsp",
-                "eslint-lsp",
+        "eslint-lsp",
 				"html-lsp",
 				"lua-language-server",
 				"phpactor",
@@ -60,10 +61,13 @@ return {
 				"html",
 				"javascript",
 				"json",
+        "lua",
 				"php",
 				"python",
 				"tsx",
 				"typescript",
+        "vim",
+        "vimdoc",
 
 				-- low level
 				"c",
