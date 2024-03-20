@@ -2,12 +2,12 @@
 local M = {}
 
 M.ui = {
-	theme = "onedark",
-
-	-- hl_override = {
-	-- 	Comment = { italic = true },
-	-- 	["@comment"] = { italic = true },
-	-- },
+	-- themeing
+	theme = "oceanic-next",
+	-- highlight overrides
+    -- See: https://nvchad.com/docs/config/theming/
+    -- TO-DO: Override the styling of inline diagnostics
+	hl_override = require("highlights"),
 }
 
 return M
