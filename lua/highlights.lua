@@ -1,0 +1,16 @@
+return {
+  Type = { italic = true, bold = true },
+  Comment = { italic = true },
+  SpecialComment = { italic = true },
+  TSComment = { italic = true },
+  TSAttribute = { italic = true, bold = true },
+  TSParameter = { italic = true },
+  TSLabel = { italic = true },
+  TSVariableBuiltin = { italic = true },
+  TSTagAttribute = { italic = true },
+  ["@comment"] = { italic = true },
+  ["@comment.todo"] = { italic = true },
+  ["@comment.warning"] = { italic = true },
+  ["@comment.note"] = { italic = true },
+  ["@comment.danger"] = { italic = true },
+}
