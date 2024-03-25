@@ -11,21 +11,22 @@ local capabilities = configs.capabilities
 
 local lspconfig = require "lspconfig"
 local servers = {
-  --TO-DO: setup LSPs for rust, prettier, php-cs-fixer, stylua
-  "clangd",
-  "cssls",
-  "eslint",
-  "html",
-  "intelephense",
-  "pylsp",
-  "rust_analyzer",
-  "tsserver",
+    --TO-DO: setup LSPs for rust, prettier, php-cs-fixer, stylua
+    "clangd",
+    "cssls",
+    "eslint",
+    "html",
+    "intelephense",
+    "pylsp",
+    "rust_analyzer",
+    "terraformls",
+    "tsserver",
 }
 
 for _, lsp in ipairs(servers) do
-  lspconfig[lsp].setup {
-    on_init = on_init,
-    on_attach = on_attach,
-    capabilities = capabilities,
-  }
+    lspconfig[lsp].setup {
+        on_init = on_init,
+        on_attach = on_attach,
+        capabilities = capabilities,
+    }
 end
