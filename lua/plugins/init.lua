@@ -69,9 +69,13 @@ return {
             ensure_installed = {
                 -- web dev
                 "css",
+                "dockerfile",
                 "html",
                 "javascript",
+                "jsdoc",
                 "json",
+                "json5",
+                "jq",
                 "lua",
                 "php",
                 "python",
