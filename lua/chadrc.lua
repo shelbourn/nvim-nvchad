@@ -1,4 +1,4 @@
--- This file  needs to have same structure as nvconfig.lua 
+-- This file  needs to have same structure as nvconfig.lua
 -- https://github.com/NvChad/NvChad/blob/v2.5/lua/nvconfig.lua
 
 ---@type ChadrcConfig
@@ -16,8 +16,12 @@ M.ui = {
         require "highlights",
         -- cursorline color settings
         CursorLine = {
-            bg = "one_bg2"
-        }
+            bg = "one_bg2",
+        },
+        TelescopeSelection = {
+            bg = "one_bg2",
+            fg = "nord_blue",
+        },
     },
 
     -- statusline
