@@ -12,7 +12,13 @@ M.ui = {
 
     -- highlight overrides
     -- See: https://nvchad.com/docs/config/theming/
-    hl_override = require "highlights",
+    hl_override = {
+        require "highlights",
+        -- cursorline color settings
+        CursorLine = {
+            bg = "one_bg2"
+        }
+    },
 
     -- statusline
     statusline = {

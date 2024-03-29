@@ -79,6 +79,7 @@ return {
                 "lua",
                 "php",
                 "python",
+                "rust",
                 "tsx",
                 "terraform",
                 "typescript",
