@@ -1,38 +1,112 @@
 return {
-  {
-    "stevearc/conform.nvim",
-    -- event = 'BufWritePre', -- uncomment for format on save
-    config = function()
-      require "configs.conform"
-    end,
-  },
+    {
+        "stevearc/conform.nvim",
+        -- event = 'BufWritePre', -- uncomment for format on save
+        config = function()
+            require "configs.conform"
+        end,
+    },
 
-  -- These are some examples, uncomment them if you want to see them work!
-  -- {
-  --   "neovim/nvim-lspconfig",
-  --   config = function()
-  --     require("nvchad.configs.lspconfig").defaults()
-  --     require "configs.lspconfig"
-  --   end,
-  -- },
-  --
-  -- {
-  -- 	"williamboman/mason.nvim",
-  -- 	opts = {
-  -- 		ensure_installed = {
-  -- 			"lua-language-server", "stylua",
-  -- 			"html-lsp", "css-lsp" , "prettier"
-  -- 		},
-  -- 	},
-  -- },
-  --
-  -- {
-  -- 	"nvim-treesitter/nvim-treesitter",
-  -- 	opts = {
-  -- 		ensure_installed = {
-  -- 			"vim", "lua", "vimdoc",
-  --      "html", "css"
-  -- 		},
-  -- 	},
-  -- },
+    {
+        "nvim-tree/nvim-tree.lua",
+        opts = {
+            git = { enable = true },
+        },
+        config = function()
+            require "configs.nvim-tree"
+        end,
+    },
+
+    ------
+    --LSP CONFIGS
+    ------
+
+    --nvim-lspconfig (loads the LSP servers)
+    {
+        "neovim/nvim-lspconfig",
+        config = function()
+            require("nvchad.configs.lspconfig").defaults()
+            require "configs.lspconfig"
+        end,
+    },
+
+    --mason.nvim (installs the LSPs)
+    {
+        "williamboman/mason.nvim",
+        opts = {
+            ensure_installed = {
+                "clangd",
+                "css-lsp",
+                "eslint-lsp",
+                "html-lsp",
+                "intelephense",
+                "lua-language-server",
+                "php-cs-fixer",
+                "prettier",
+                "prettierd",
+                "python-lsp-server",
+                "rust-analyzer",
+                "stylua",
+                "terraform-ls",
+                "typescript-language-server",
+            },
+        },
+    },
+
+    -- lsp_lines.nvim: virtual text for diagnostics instead of real text
+    {
+        "https://git.sr.ht/~whynothugo/lsp_lines.nvim",
+        lazy = true,
+        config = function()
+            require("lsp_lines").setup()
+        end,
+    },
+
+    ------
+    --syntax highlighting
+    ------
+
+    {
+        "nvim-treesitter/nvim-treesitter",
+        opts = {
+            ensure_installed = {
+                -- web dev
+                "css",
+                "dockerfile",
+                "html",
+                "javascript",
+                "jsdoc",
+                "json",
+                "json5",
+                "jq",
+                "lua",
+                "php",
+                "python",
+                "rust",
+                "tsx",
+                "terraform",
+                "typescript",
+                "vim",
+                "vimdoc",
+
+                -- low level
+                "c",
+                "rust",
+                "zig",
+            },
+        },
+    },
+
+    ------
+    --context (pinning fn context, var context, etc)
+    ------
+
+    {
+        "nvim-treesitter/nvim-treesitter-context",
+        lazy = true,
+        event = require "configs.context_ft",
+        config = function()
+            require "configs.context"
+        end,
+    },
 }
