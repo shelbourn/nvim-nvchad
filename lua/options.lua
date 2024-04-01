@@ -22,8 +22,10 @@ o.cursorlineopt = "both"
 
 --this works but it doesn't use the current API for disabling virtual_text (vim.diagnostic.config())
 vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(vim.lsp.diagnostic.on_publish_diagnostics, {
-  virtual_text = false,
+    virtual_text = false,
 })
+
+vim.g.nvim_tree_respect_buf_cwd = 1
 
 --disabling swap files because they suck and are annoying
 opt.swapfile = false

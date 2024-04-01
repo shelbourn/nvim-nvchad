@@ -18,6 +18,7 @@ M.ui = {
         CursorLine = {
             bg = "one_bg2",
         },
+        -- telescope customizations
         TelescopeSelection = {
             bg = "one_bg2",
             fg = "nord_blue",

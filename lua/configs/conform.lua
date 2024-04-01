@@ -7,7 +7,7 @@ local options = {
         json = { { "prettierd", "prettier" } },
         lua = { "stylua" },
         -- get this formatter working, it needs a config and I'm not sure how to do it
-        -- php = { "php" },
+        php = { "php" },
         terraform = { "terraform-ls" },
         typescript = { { "prettierd", "prettier" } },
         typescriptreact = { { "prettierd", "prettier" } },
