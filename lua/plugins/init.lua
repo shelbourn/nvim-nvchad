@@ -11,10 +11,15 @@ return {
         "nvim-tree/nvim-tree.lua",
         opts = {
             git = { enable = true },
+            -- enables the root dir of nvim-tree to update if a file is opened that is NOT in the CWD
+            update_focused_file = {
+                enable = true,
+                update_root = {
+                    enable = true,
+                    ignore_list = {},
+                },
+            },
         },
-        config = function()
-            require "configs.nvim-tree"
-        end,
     },
 
     ------
