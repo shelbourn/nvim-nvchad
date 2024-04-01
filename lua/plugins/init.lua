@@ -12,6 +12,9 @@ return {
         opts = {
             git = { enable = true },
         },
+        config = function()
+            require "configs.nvim-tree"
+        end,
     },
 
     ------

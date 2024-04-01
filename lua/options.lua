@@ -25,7 +25,5 @@ vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(vim.lsp.diagn
     virtual_text = false,
 })
 
-vim.g.nvim_tree_respect_buf_cwd = 1
-
 --disabling swap files because they suck and are annoying
 opt.swapfile = false
