@@ -3,10 +3,6 @@ require "nvchad.options"
 local o = vim.o
 local opt = vim.opt
 local lsp = vim.lsp
-local cmd = vim.cmd
-local api = vim.api
-local nvim_create_autocmd = api.nvim_create_autocmd
-local nvim_set_hl = api.nvim_set_hl
 
 --tab stops
 opt.shiftwidth = 4
@@ -40,3 +36,4 @@ opt.cmdheight = 0
 --whitespace highlights
 -------
 opt.list = true
+opt.listchars = "tab:-> ,trail:-,nbsp:+,eol:$"
