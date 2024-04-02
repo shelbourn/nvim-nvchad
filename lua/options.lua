@@ -2,6 +2,11 @@ require "nvchad.options"
 
 local o = vim.o
 local opt = vim.opt
+local lsp = vim.lsp
+local cmd = vim.cmd
+local api = vim.api
+local nvim_create_autocmd = api.nvim_create_autocmd
+local nvim_set_hl = api.nvim_set_hl
 
 --tab stops
 opt.shiftwidth = 4
@@ -21,7 +26,7 @@ o.cursorlineopt = "both"
 -- vim.diagnostic.config { virtual_text = false }
 
 --this works but it doesn't use the current API for disabling virtual_text (vim.diagnostic.config())
-vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(vim.lsp.diagnostic.on_publish_diagnostics, {
+lsp.handlers["textDocument/publishDiagnostics"] = lsp.with(lsp.diagnostic.on_publish_diagnostics, {
     virtual_text = false,
 })
 
@@ -30,3 +35,35 @@ opt.swapfile = false
 
 -- disabling the persistent commmand line when not in use
 opt.cmdheight = 0
+
+-------
+--whitespace highlights
+-------
+opt.list = true
+
+local space = "·"
+opt.listchars:append {
+	tab = "│─",
+	multispace = space,
+	lead = space,
+	trail = space,
+	nbsp = space
+}
+
+cmd([[match TrailingWhitespace /\s\+$/]])
+
+nvim_set_hl(0, "TrailingWhitespace", { link = "Error" })
+
+nvim_create_autocmd("InsertEnter", {
+	callback = function()
+		opt.listchars.trail = nil
+		nvim_set_hl(0, "TrailingWhitespace", { link = "Whitespace" })
+	end
+})
+
+nvim_create_autocmd("InsertLeave", {
+	callback = function()
+		opt.listchars.trail = space
+		nvim_set_hl(0, "TrailingWhitespace", { link = "Error" })
+	end
+})
