@@ -22,6 +22,13 @@ return {
         },
     },
 
+    {
+        "nvim-telescope/telescope.nvim",
+        config = function()
+            require "configs.nvim-telescope"
+        end,
+    },
+
     ------
     --LSP CONFIGS
     ------
