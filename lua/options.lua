@@ -27,3 +27,6 @@ vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(vim.lsp.diagn
 
 --disabling swap files because they suck and are annoying
 opt.swapfile = false
+
+-- disabling the persistent commmand line when not in use
+opt.cmdheight = 0
