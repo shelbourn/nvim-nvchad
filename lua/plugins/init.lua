@@ -1,4 +1,7 @@
 return {
+    ------
+    --Formatting
+    ------
     {
         "stevearc/conform.nvim",
         -- event = 'BufWritePre', -- uncomment for format on save
@@ -7,6 +10,9 @@ return {
         end,
     },
 
+    ------
+    --Dir drawer [should remove eventually because I don't really use it or like it]
+    ------
     {
         "nvim-tree/nvim-tree.lua",
         opts = {
@@ -22,17 +28,18 @@ return {
         },
     },
 
-    {
-        "nvim-telescope/telescope.nvim",
-        config = function()
-            require "configs.nvim-telescope"
-        end,
-    },
+    --commenting this out because it's causing the results list to sort in reverse order
+    --was attempting to get telescope to exit on a single <ESC> press
+    -- {
+    --     "nvim-telescope/telescope.nvim",
+    --     config = function()
+    --         require "configs.nvim-telescope"
+    --     end,
+    -- },
 
     ------
     --LSP CONFIGS
     ------
-
     --nvim-lspconfig (loads the LSP servers)
     {
         "neovim/nvim-lspconfig",
@@ -77,7 +84,6 @@ return {
     ------
     --syntax highlighting
     ------
-
     {
         "nvim-treesitter/nvim-treesitter",
         opts = {
@@ -106,13 +112,15 @@ return {
                 "rust",
                 "zig",
             },
+            autotag = {
+                enable = true,
+            },
         },
     },
 
     ------
     --context (pinning fn context, var context, etc)
     ------
-
     {
         "nvim-treesitter/nvim-treesitter-context",
         lazy = true,
@@ -120,5 +128,14 @@ return {
         config = function()
             require "configs.context"
         end,
+    },
+
+    ------
+    --auto close tag
+    ------
+    {
+        "windwp/nvim-ts-autotag",
+        lazy = true,
+        event = require "configs.nvim_autotag_ft",
     },
 }

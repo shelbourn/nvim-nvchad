@@ -6,8 +6,8 @@ local ft_config = {}
 ------
 local ft = { "js", "ts", "jsx", "tsx", "py", "rs", "php" }
 
-for i, name in ipairs(ft) do
-	ft_config[i] = "BufEnter *." .. name
+for i, file_type in ipairs(ft) do
+	ft_config[i] = "BufEnter *." .. file_type
 end
 
 return ft_config

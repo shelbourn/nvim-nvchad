@@ -36,4 +36,5 @@ opt.cmdheight = 0
 --whitespace highlights
 -------
 opt.list = true
-opt.listchars = "tab:-> ,trail:-,nbsp:+,eol:$"
+--I want to set the trail to a middle dot but the encoding is off
+opt.listchars = "tab:-> ,nbsp:+,eol:$"
