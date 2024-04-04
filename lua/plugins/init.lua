@@ -1,6 +1,6 @@
 return {
     ------
-    --Formatting
+    --formatting
     ------
     {
         "stevearc/conform.nvim",
@@ -11,7 +11,7 @@ return {
     },
 
     ------
-    --Dir drawer [should remove eventually because I don't really use it or like it]
+    --dir drawer [should remove eventually because I don't really use it or like it]
     ------
     {
         "nvim-tree/nvim-tree.lua",
@@ -38,7 +38,7 @@ return {
     -- },
 
     ------
-    --LSP CONFIGS
+    --lsp configs
     ------
     --nvim-lspconfig (loads the LSP servers)
     {
@@ -137,5 +137,16 @@ return {
         "windwp/nvim-ts-autotag",
         lazy = true,
         event = require "configs.nvim_autotag_ft",
+    },
+
+    ------
+    --active block highlighting
+    ------
+    {
+        "shellraining/hlchunk.nvim",
+        event = { "UIEnter" },
+        config = function()
+            require "configs.hlchunk"
+        end,
     },
 }
