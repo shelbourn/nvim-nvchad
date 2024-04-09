@@ -16,7 +16,7 @@ M.ui = {
         require "highlights",
         -- cursorline color settings
         CursorLine = {
-            bg = "one_bg2",
+            bg = "one_bg1",
         },
         -- telescope customizations
         TelescopeSelection = {

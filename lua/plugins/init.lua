@@ -1,13 +1,10 @@
 return {
     ------
-    --formatting
+    --copilot
     ------
     {
-        "stevearc/conform.nvim",
-        -- event = 'BufWritePre', -- uncomment for format on save
-        config = function()
-            require "configs.conform"
-        end,
+        "github/copilot.vim",
+        lazy = false,
     },
 
     ------
@@ -25,7 +22,21 @@ return {
                     ignore_list = {},
                 },
             },
+            filters = {
+                dotfiles = false,
+            },
         },
+    },
+
+    ------
+    --formatting
+    ------
+    {
+        "stevearc/conform.nvim",
+        -- event = 'BufWritePre', -- uncomment for format on save
+        config = function()
+            require "configs.conform"
+        end,
     },
 
     --commenting this out because it's causing the results list to sort in reverse order
