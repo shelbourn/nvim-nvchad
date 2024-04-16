@@ -25,6 +25,9 @@ return {
             filters = {
                 dotfiles = false,
             },
+            view = {
+                width = 60,
+            },
         },
     },
 
@@ -131,15 +134,16 @@ return {
 
     ------
     --context (pinning fn context, var context, etc)
+    --commenting out for now until I decide whether I like it or not
     ------
-    {
-        "nvim-treesitter/nvim-treesitter-context",
-        lazy = true,
-        event = require "configs.context_ft",
-        config = function()
-            require "configs.context"
-        end,
-    },
+    -- {
+    --     "nvim-treesitter/nvim-treesitter-context",
+    --     lazy = true,
+    --     event = require "configs.context_ft",
+    --     config = function()
+    --         require "configs.context"
+    --     end,
+    -- },
 
     ------
     --auto close tag
