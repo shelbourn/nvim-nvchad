@@ -32,6 +32,11 @@ return {
     },
 
     ------
+    --completions
+    ------
+    { "gitaarik/nvim-cmp-toggle", lazy = false },
+
+    ------
     --formatting
     ------
     {

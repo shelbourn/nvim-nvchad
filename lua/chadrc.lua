@@ -8,7 +8,7 @@ local M = {}
 -- also, check it out here: https://github.com/NvChad/NvChad/blob/v2.5/lua/nvconfig.lua
 M.ui = {
     -- themeing
-    theme = "doomchad",
+    theme = "chadracula",
 
     -- highlight overrides
     -- See: https://nvchad.com/docs/config/theming/
@@ -27,7 +27,8 @@ M.ui = {
 
     -- statusline
     statusline = {
-        theme = "vscode_colored",
+        theme = "default",
+        separator_style = "arrow",
     },
 }
 
