@@ -32,4 +32,10 @@ M.ui = {
     },
 }
 
+M.cmp = {
+    completion = {
+        completeopt = "menu,menuone,noinsert,noselect",
+    },
+}
+
 return M

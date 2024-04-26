@@ -26,6 +26,7 @@ return {
                 dotfiles = false,
             },
             view = {
+                centralize_selection = true,
                 width = 60,
             },
         },
@@ -35,6 +36,15 @@ return {
     --completions
     ------
     { "gitaarik/nvim-cmp-toggle", lazy = false },
+
+    {
+        "hrsh7th/nvim-cmp",
+        opts = {
+            completion = {
+                completeopt = "menu,menuone,noinsert,noselect",
+            },
+        },
+    },
 
     ------
     --formatting

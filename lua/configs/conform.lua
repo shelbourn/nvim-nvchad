@@ -9,6 +9,7 @@ local options = {
         lua = { "stylua" },
         -- get this formatter working, it needs a config and I'm not sure how to do it
         php = { "php" },
+        scss = { { "prettierd", "prettier" } },
         terraform = { "terraform-ls" },
         typescript = { { "prettierd", "prettier" } },
         typescriptreact = { { "prettierd", "prettier" } },
