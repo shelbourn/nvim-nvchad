@@ -26,3 +26,8 @@ end, { desc = "Toggle Current line blame (file)" })
 
 -- toggle nvim-cmp autocompletions
 map("n", "<leader>a", ":NvimCmpToggle<CR>", { desc = "Toggle Autocompletions (normal)", noremap = true, silent = true })
+
+-- binding copilot 'accept' to something other that <Tab>
+map("i", "<C-S-l>", function()
+    vim.fn.feedkeys(vim.fn["copilot#Accept"](), "")
+end, { desc = "Copilot Accept", replace_keycodes = true, nowait = true, silent = true, expr = true, noremap = true })
